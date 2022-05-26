@@ -122,14 +122,6 @@
 #endif
 #define E0_ENABLE_PIN               X_ENABLE_PIN
 
-
-//THIS IS MY CHANGE (Dual X)
-#define X2_ENABLE_PIN                       PC3 //(connect to ground to always enable)
-#define X2_STEP_PIN                         PA14 //SWCLK (STEP - pulled low)
-#define X2_DIR_PIN                          PA13 //SWIO  (DIR - pulled high)
-
-
-
 //
 // Release PB4 (Y_ENABLE_PIN) from JTAG NRST role
 //
