@@ -90,31 +90,29 @@
 //
 // Steppers
 //
-
-//SWITCHED X AND Y
-#ifndef Y_STEP_PIN
-  #define Y_STEP_PIN                        PC2
-#endif
-#ifndef Y_DIR_PIN
-  #define Y_DIR_PIN                         PB9
-#endif
-#define Y_ENABLE_PIN                        PC3   // Shared
-
 #ifndef X_STEP_PIN
-  #define X_STEP_PIN                        PB8
+  #define X_STEP_PIN                        PC2
 #endif
 #ifndef X_DIR_PIN
-  #define X_DIR_PIN                         PB7
+  #define X_DIR_PIN                         PB9
 #endif
-#define X_ENABLE_PIN                Y_ENABLE_PIN
+#define X_ENABLE_PIN                        PC3   // Shared
 
-#ifndef Z_STEP_PIN
+#ifndef Y_STEP_PIN
+  #define Y_STEP_PIN                        PB8
+#endif
+#ifndef Y_DIR_PIN
+  #define Y_DIR_PIN                         PB7
+#endif
+#define Y_ENABLE_PIN                X_ENABLE_PIN
+//CHANGED Z to X2
+#ifndef X2_STEP_PIN
   #define Z_STEP_PIN                        PB6
 #endif
-#ifndef Z_DIR_PIN
+#ifndef X2_DIR_PIN
   #define Z_DIR_PIN                         PB5
 #endif
-#define Z_ENABLE_PIN                X_ENABLE_PIN
+#define X2_ENABLE_PIN                X_ENABLE_PIN
 
 #ifndef E0_STEP_PIN
   #define E0_STEP_PIN                       PB4
