@@ -105,14 +105,14 @@
   #define Y_DIR_PIN                         PB7
 #endif
 #define Y_ENABLE_PIN                X_ENABLE_PIN
-//CHANGED Z to X2
-#ifndef X2_STEP_PIN
-  #define X2_STEP_PIN                        PB6
+
+#ifndef Z_STEP_PIN
+  #define Z_STEP_PIN                        PB6
 #endif
-#ifndef X2_DIR_PIN
-  #define X2_DIR_PIN                         PB5
+#ifndef Z_DIR_PIN
+  #define Z_DIR_PIN                         PB5
 #endif
-#define X2_ENABLE_PIN                X_ENABLE_PIN
+#define Z_ENABLE_PIN                X_ENABLE_PIN
 
 #ifndef E0_STEP_PIN
   #define E0_STEP_PIN                       PB4
@@ -121,6 +121,13 @@
   #define E0_DIR_PIN                        PB3
 #endif
 #define E0_ENABLE_PIN               X_ENABLE_PIN
+
+//Redefine
+#define X2_STEP_PIN                        PB6
+#define X2_DIR_PIN                         PB5
+#define X2_ENABLE_PIN                X_ENABLE_PIN
+
+
 
 //
 // Release PB4 (Y_ENABLE_PIN) from JTAG NRST role
