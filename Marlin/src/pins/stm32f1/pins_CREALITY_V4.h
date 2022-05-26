@@ -107,10 +107,10 @@
 #define Y_ENABLE_PIN                X_ENABLE_PIN
 //CHANGED Z to X2
 #ifndef X2_STEP_PIN
-  #define Z_STEP_PIN                        PB6
+  #define X2_STEP_PIN                        PB6
 #endif
 #ifndef X2_DIR_PIN
-  #define Z_DIR_PIN                         PB5
+  #define X2_DIR_PIN                         PB5
 #endif
 #define X2_ENABLE_PIN                X_ENABLE_PIN
 
