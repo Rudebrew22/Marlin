@@ -114,6 +114,7 @@
 #endif
 #define Z_ENABLE_PIN                X_ENABLE_PIN
 
+
 #ifndef E0_STEP_PIN
   #define E0_STEP_PIN                       PB4
 #endif
@@ -122,11 +123,28 @@
 #endif
 #define E0_ENABLE_PIN               X_ENABLE_PIN
 
-//Redefine
-#define X2_STEP_PIN                        PB6
-#define X2_DIR_PIN                         PB5
-#define X2_ENABLE_PIN                X_ENABLE_PIN
 
+/*
+//DUMP E to be redefined
+#ifndef E0_STEP_PIN
+  #define E0_STEP_PIN                      PA6
+#endif
+#ifndef E0_DIR_PIN
+  #define E0_DIR_PIN                       PA7
+#endif
+#define E0_ENABLE_PIN               X_ENABLE_PIN
+
+//Redefine E0 as X2 IT WORKS!!!
+#define X2_STEP_PIN                        PB4
+#define X2_DIR_PIN                         PB3
+#define X2_ENABLE_PIN                X_ENABLE_PIN
+*/
+
+// USE the extra pins
+#define X2_STEP_PIN                        PA14
+#define X2_DIR_PIN                         PA13
+#define X2_ENABLE_PIN                      PC3
+//#define X2_ENABLE_PIN                X_ENABLE_PIN
 
 
 //
