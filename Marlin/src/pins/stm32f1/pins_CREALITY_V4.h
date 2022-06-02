@@ -70,11 +70,19 @@
 //
 // Limit Switches
 //
+//#define X_STOP_PIN                          PA5
 #define X_STOP_PIN                          PA5
 #define Y_STOP_PIN                          PA6
 #ifndef Z_STOP_PIN
   #define Z_STOP_PIN                        PA7
 #endif
+#define X2_STOP_PIN                         PC5
+#define Y2_STOP_PIN                         PC4
+
+// Dump the temp pins
+#define TEMP_0_PIN                          PA4 //PC5   // TH1
+#define TEMP_BED_PIN                        PA4 //PC4   // TB1
+
 
 #ifndef Z_MIN_PROBE_PIN
   #define Z_MIN_PROBE_PIN                   PB1   // BLTouch IN
@@ -105,7 +113,7 @@
   #define Y_DIR_PIN                         PB7
 #endif
 #define Y_ENABLE_PIN                X_ENABLE_PIN
-
+/* to be redefined
 #ifndef Z_STEP_PIN
   #define Z_STEP_PIN                        PB6
 #endif
@@ -114,7 +122,6 @@
 #endif
 #define Z_ENABLE_PIN                X_ENABLE_PIN
 
-
 #ifndef E0_STEP_PIN
   #define E0_STEP_PIN                       PB4
 #endif
@@ -122,29 +129,28 @@
   #define E0_DIR_PIN                        PB3
 #endif
 #define E0_ENABLE_PIN               X_ENABLE_PIN
+*/
 
 
-/*
 //DUMP E to be redefined
-#ifndef E0_STEP_PIN
-  #define E0_STEP_PIN                      PA6
-#endif
-#ifndef E0_DIR_PIN
-  #define E0_DIR_PIN                       PA7
-#endif
+#define E0_STEP_PIN                      PA6
+#define E0_DIR_PIN                       PA7
 #define E0_ENABLE_PIN               X_ENABLE_PIN
 
 //Redefine E0 as X2 IT WORKS!!!
 #define X2_STEP_PIN                        PB4
 #define X2_DIR_PIN                         PB3
 #define X2_ENABLE_PIN                X_ENABLE_PIN
-*/
 
-// USE the extra pins
-#define X2_STEP_PIN                        PA14
-#define X2_DIR_PIN                         PA13
-#define X2_ENABLE_PIN                      PC3
-//#define X2_ENABLE_PIN                X_ENABLE_PIN
+//Redefine Z as Y2 IT WORKS!!!
+#define Y2_STEP_PIN                        PB6
+#define Y2_DIR_PIN                         PB5
+#define Y2_ENABLE_PIN                X_ENABLE_PIN
+
+//Define extra pins as Z
+#define Z_STEP_PIN                        PA14 
+#define Z_DIR_PIN                         PA13 //closer to VCC
+#define Z_ENABLE_PIN                      PC3
 
 
 //
@@ -155,8 +161,8 @@
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN                          PC5   // TH1
-#define TEMP_BED_PIN                        PC4   // TB1
+//#define TEMP_0_PIN                          PC5   // TH1
+//#define TEMP_BED_PIN                        PC4   // TB1
 
 //
 // Heaters / Fans
