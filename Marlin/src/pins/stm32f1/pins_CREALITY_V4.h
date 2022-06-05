@@ -133,8 +133,8 @@
 
 
 //DUMP E to be redefined
-#define E0_STEP_PIN                      PA6
-#define E0_DIR_PIN                       PA7
+#define E0_STEP_PIN                      PB1 //PA6
+#define E0_DIR_PIN                       PB2 //PA7
 #define E0_ENABLE_PIN               X_ENABLE_PIN
 
 //Redefine E0 as X2 IT WORKS!!!
