@@ -71,13 +71,19 @@
 // Limit Switches
 //
 //#define X_STOP_PIN                          PA5
-#define X_STOP_PIN                          PA5
-#define Y_STOP_PIN                          PA6
+//#define Y_STOP_PIN                          PA6
 #ifndef Z_STOP_PIN
-  #define Z_STOP_PIN                        PA7
+  #define Z_STOP_PIN                          PA7
 #endif
-#define X2_STOP_PIN                         PC5
-#define Y2_STOP_PIN                         PC4
+//#define X2_STOP_PIN                         PC5
+//#define Y2_STOP_PIN                         PC4
+//This is my change - IDEA - temp replace lines 73,74,78,79
+#define X_MIN_PIN                             PA5
+#define X_MAX_PIN                             PA6
+#define Y_MIN_PIN                             PC5 //Always triggered
+#define Y_MAX_PIN                             PC4
+
+
 
 // Dump the temp pins
 #define TEMP_0_PIN                          PA4 //PC5   // TH1
@@ -137,12 +143,12 @@
 #define E0_DIR_PIN                       PB2 //PA7
 #define E0_ENABLE_PIN               X_ENABLE_PIN
 
-//Redefine E0 as X2 IT WORKS!!!
+//Redefine E0 as X2 IT WORKS!!! Name X2 or E1
 #define X2_STEP_PIN                        PB4
 #define X2_DIR_PIN                         PB3
 #define X2_ENABLE_PIN                X_ENABLE_PIN
 
-//Redefine Z as Y2 IT WORKS!!!
+//Redefine Z as Y2 IT WORKS!!! Name Y2 or E1
 #define Y2_STEP_PIN                        PB6
 #define Y2_DIR_PIN                         PB5
 #define Y2_ENABLE_PIN                X_ENABLE_PIN

@@ -736,7 +736,7 @@
 #define X_DUAL_STEPPER_DRIVERS //THIS IS MY CHANGE
 #if ENABLED(X_DUAL_STEPPER_DRIVERS)
   #define INVERT_X2_VS_X_DIR    // Enable if X2 direction signal is opposite to X
-  #define X_DUAL_ENDSTOPS
+  #define X_DUAL_ENDSTOPS 
   #if ENABLED(X_DUAL_ENDSTOPS)
     #define X2_USE_ENDSTOP _XMAX_
     #define X2_ENDSTOP_ADJUSTMENT  0
@@ -746,7 +746,7 @@
 #define Y_DUAL_STEPPER_DRIVERS
 #if ENABLED(Y_DUAL_STEPPER_DRIVERS)
   #define INVERT_Y2_VS_Y_DIR   // Enable if Y2 direction signal is opposite to Y
-  //#define Y_DUAL_ENDSTOPS
+  #define Y_DUAL_ENDSTOPS //THIS IS MY CHANGE | helps test
   #if ENABLED(Y_DUAL_ENDSTOPS)
     #define Y2_USE_ENDSTOP _YMAX_
     #define Y2_ENDSTOP_ADJUSTMENT  0
@@ -1488,7 +1488,7 @@
    * an option on the LCD screen to continue the print from the last-known
    * point in the file.
    */
-  #define POWER_LOSS_RECOVERY
+  //#define POWER_LOSS_RECOVERY //THIS IS MY CHANGE 9/30
   #if ENABLED(POWER_LOSS_RECOVERY)
     #define PLR_ENABLED_DEFAULT   false // Power Loss Recovery enabled by default. (Set with 'M413 Sn' & M500)
     //#define BACKUP_POWER_SUPPLY       // Backup power / UPS to move the steppers on power loss
